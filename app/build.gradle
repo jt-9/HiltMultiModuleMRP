@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+apply from: '../config.gradle'
+
+android {
+
+    defaultConfig {
+        applicationId "com.example.samplehilt"
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation project(':feature_main')
+    implementation project(':component_db')
+}

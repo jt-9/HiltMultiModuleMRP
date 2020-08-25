@@ -1,0 +1,4 @@
+include ':component_db'
+include ':feature_main'
+include ':app'
+rootProject.name = "Sample Hilt"
