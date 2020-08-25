@@ -1,3 +1,4 @@
+include ':base_ui'
 include ':component_db'
 include ':feature_main'
 include ':app'

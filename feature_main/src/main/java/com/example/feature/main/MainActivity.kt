@@ -2,18 +2,18 @@ package com.example.feature.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
+import com.example.base_ui.BaseViewModelActivity
 import com.example.feature.R
+import com.example.feature.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseViewModelActivity<ActivityMainBinding, MainActivityViewModel>(R.layout.activity_main) {
 
-    private val viewModel by viewModels<MainActivityViewModel>()
+    override val viewModel: MainActivityViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         viewModel.logSelfState()
     }

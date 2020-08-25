@@ -23,5 +23,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     implementation project(':feature_main')
+    implementation project(':base_ui')
     implementation project(':component_db')
 }
